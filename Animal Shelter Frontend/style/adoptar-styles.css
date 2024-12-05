@@ -1,0 +1,318 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50C878;
+    --accent-color: #FFD700;
+    --text-color: #645f5f;
+    --bg-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles (similar to the main page) */
+header {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-img {
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links{
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--primary-color);
+}
+
+.nav-item::after {
+    content: "\f1b0";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover::after {
+    transform: translateX(-50%) scale(1);
+}
+
+.btn-login {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #3A80D2;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #f4f4f4;
+}
+
+.title {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Adoption steps */
+.adoption-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+}
+
+.step {
+    text-align: center;
+    max-width: 300px;
+    margin: 2rem;
+    animation: fadeInUp 1s ease;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.step:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.step-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+/* Follow-up section */
+.follow-up {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 60px;
+    animation: fadeIn 1s ease;
+}
+
+/* Available pets section */
+.available-pets {
+    padding: 4rem 0;
+}
+
+.pets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pets-column {
+    flex: 0 0 48%;
+    margin-bottom: 2rem;
+}
+
+.pets-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.pet-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.pet-info {
+    padding: 1rem;
+}
+
+.pet-info h4 {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles (similar to the main page) */
+footer {
+    background-color: #333;
+    color: var(--bg-color);
+    padding: 2rem 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--bg-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pets-container {
+        flex-direction: column;
+    }
+
+    .pets-column {
+        flex: 0 0 100%;
+    }
+}
+
+/* Color normal del enlace */
+a {
+    color: var(--secondary-color); /* Color de enlace normal */
+    text-decoration: none; 
+}
+
+/* Color del enlace cuando el usuario pasa el cursor sobre él */
+a:hover {
+    color: var(--secondary-color); /* Color al pasar el cursor */
+}
+
+/* Color del enlace cuando se hace clic */
+a:active {
+    color: var(--secondary-color);
+}
+
+/* Color del enlace ya visitado */
+a:visited {
+    color: var(--secondary-color);
+}
+
+.visit-us {
+    background-color: white;
+    color: #50C878;
+    padding: 3rem 0;
+    text-align: center;
+}

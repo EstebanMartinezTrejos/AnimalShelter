@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/FormMascota.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style/tablaMascota.css">
+    <title>Tabla Mascotas</title>
+</head>
+<body>
+    <table id="tabla">
+        <thead>
+        <tr>
+            <th colspan="6">Mascotas</th>
+        </tr>
+        <tr>
+            <th>idmascota</th>
+            <th>nombre</th>
+            <th>raza</th>
+            <th>edad</th>
+            <th>peso</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="formulario">
+    <h1>Modificar Mascotas</h1>
+    <form action="">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre de la mascota" required>
+        <br>
+        <label for="raza">Raza:</label>
+        <input type="text" id="raza" name="raza" placeholder="Raza de la mascota" required>
+        <br>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" placeholder="Edad de la mascota" required>
+        <br>
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" name="peso" placeholder="Peso de la mascota" required>
+        <br>
+        <input id="btnModificar" type="submit" value="Actualizar">
+    </form> 
+</div>
+
+    <script src="script/tablaMascota.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50C878;
+    --accent-color: #50C878;
+    --text-color: #645f5f;
+    --bg-color: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-img {
+    border-radius: 8px;
+}
+
+/* Header y navegación */
+header {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-img {
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: none;
+    list-style: none;
+}
+
+.nav-item {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--primary-color);
+}
+
+.btn-login {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #3A80D2;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Hero section */
+.hero {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 4rem 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Sponsorship steps */
+.sponsorship-steps {
+    padding: 4rem 0;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.step h2 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* CTA section */
+.cta {
+    background-color: #f4f4f4;
+    color: var(--text-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:#50C878
+}
+
+/* Footer styles (similar to the main page) */
+footer {
+    background-color: #333;
+    color: var(--bg-color);
+    padding: 2rem 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--bg-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Color normal del enlace */
+a {
+    color: var(--secondary-color); /* Color de enlace normal */
+    text-decoration: none; 
+}
+
+/* Color del enlace cuando el usuario pasa el cursor sobre él */
+a:hover {
+    color: var(--secondary-color); /* Color al pasar el cursor */
+}
+
+/* Color del enlace cuando se hace clic */
+a:active {
+    color: var(--secondary-color);
+}
+
+/* Color del enlace ya visitado */
+a:visited {
+    color: var(--secondary-color);
+}

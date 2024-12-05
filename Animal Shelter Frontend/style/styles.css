@@ -1,0 +1,360 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50C878;
+    --accent-color: #FFD700;
+    --text-color: #787272;
+    --bg-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-img {
+    border-radius: 8px;
+}
+
+/* Header y navegación */
+header {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-img {
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+.nav-links {
+    display: none;
+    list-style: none;
+}
+/*Pata barra sisas*/
+.nav-item {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--primary-color);
+}
+
+.nav-item::after {
+    content: "\f1b0";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover::after {
+    transform: translateX(-50%) scale(1);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section y carrusel */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.carousel {
+    position: relative;
+    width: 115%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-adopt { background-color: var(--primary-color); }
+.btn-sponsor { background-color: var(--secondary-color); }
+.btn-donate { background-color: var(--accent-color); }
+
+.about-content {
+    text-align: center;
+    max-width: 760px;
+    margin: 60px;
+    gap: 30px;
+}
+
+.about-content h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 2px;
+}
+
+.about-content p {
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Shelter info section */
+.shelter-info {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.shelter-info .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Adoption center section */
+.adoption-center {
+    padding: 3rem 0;
+}
+
+.adoption-center .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.adoption-image,
+.adoption-text {
+    max-width: 400px;
+}
+
+/* Visit us section */
+.visit-us {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* Footer y formulario de contacto */
+footer {
+    background-color: #ffffff;
+    color: #787272;
+    padding: 2rem 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info,
+.contact-form,
+.social-links {
+    width: 100%;
+    max-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #555050;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Media queries para responsividad */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .carousel-container {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .hero-buttons {
+        width: 40%;
+    }
+
+    .adoption-center .container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .adoption-image,
+    .adoption-text {
+        width: 48%;
+    }
+
+    footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .contact-info,
+    .contact-form,
+    .social-links {
+        width: 30%;
+    }
+}
+
+/* Estilos para enlaces */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:visited {
+    color: var(--secondary-color);
+}
+
